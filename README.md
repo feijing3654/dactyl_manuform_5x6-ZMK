@@ -1,33 +1,37 @@
-****Dactyl Manuform Keyboard. Here is what you need to KNOW****
+# Dactyl Manuform wireless
 
-**Dactyl Manuform keyboards** with **ZMK** (Zephyr-based Microcontroller Keyboard) firmware work by utilizing ZMK to manage keyboard functionality.
-**ZMK** is an **open-source firmware** designed for **wireless mechanical keyboards**. It's built on top of the **Zephyr RTOS** (Real-Time Operating System), providing a **flexible** and **reliable** platform for custom keyboard firmware.
+This tutorial based on last dactyl manuform (almost the same with the [original dactyl manuform 5x6](https://github.com/abstracthat/dactyl-manuform) I've built before.
+So it won't include hardware wiring details.
 
-To set up a **Dactyl Manuform keyboard** with **ZMK**, you typically start by flashing the **ZMK firmware** onto the microcontroller of your keyboard. 
-This firmware enables **wireless connectivity**, **key mapping customization**, and other features. In our case **SPLITS**.
+One thing changed is that I decided to build a wireless one to fit my iMac.
+So I have to change control board and firmware and add a battery.
 
-How to do this the simplest way is this: 
+## Control Board
 
-**Compiling and flashing**
+I chosed [nice! nano](https://nicekeyboards.com/nice-nano) because it's a popular solution and compatible with the last control board (they have the same pin definition).
 
-* Fork this repo by clicking on the Fork button (basically with this you copy this code to your account) it has all the necessary code for you to start.
-* Then you go to this website [Keymap Editor](https://nickcoutsos.github.io/keymap-editor) (which is from this guy `https://github.com/nickcoutsos/keymap-editor` all props to him for this amazing tool).
-* In here you connect your GitHub account and find your repo you can ask me any question that you might have by submitting an Issue.
-* When that is done click on save (in the site) this will also save all your changes in your GitHub account.
+There isn't too much to care about at this part, except the way to get into bootloader is to connect the GND and the RST twice quickly.
 
-**We are getting close. Four more steps**
+To flash firmware into nice! nano, use usb cable to connect it to computer then copy .uf2 file into the file system appeared when it's in bootloader.
 
-* Go back to your repo (=repository) and go to actions. When it is done (hopefully without any errors if yes again send me an issue for help) download the file it should be a zip file called firmware.zip
-**Last step flashing**
-* In the zip file you should find two files with the name `dactyl_manuform_5x6_left-nice_nano_v2-zmk.uf2` and `dactyl_manuform_5x6_right-nice_nano_v2-zmk.uf2` this is your firmware
-* Now get one of the two halves and get it into bootloader mode. To do this first power it on and then connect it to USB with a computer, then with something like a paper clip press the button next to the USB (between the USB and the on-off switch)
-* This should make a new folder in your PC appear called **NICENANO** you then drag the corresponding file into that drive (the nicenano one) and that is it. You did it. (did it for the second half as well)
+## Battery
 
-**Known issues**
-* ZMK only reports the battery of the central half the left one.
-* If you want to communicate with usb you can definitely do so by connecting the ***LEFT*** half the right one (the peripheral doesn't work like that)
-* You can charge by connecting them with a cable. As said above if the cable is connected to the left one it will both charge and also work at the same time without Bluetooth the right one just charges.
-* Your Bluetooth needs to be 4.2 at a minimum otherwise it will not work with Bluetooth.
+Still not much to care, pick a popular chargable battery online, wire the red wire to B+ pin on nice! nano and black wire to B-, that's all. 
 
-NOTE:
-***I would highly advise you to give [ZMK](ZMK.dev) a read it literally has everything you would need to know.***
+I chose 2000mah battery, according to the [prediction](https://zmk.dev/power-profiler), left keyboard could work 3 months while the right one near a year.
+
+## Firmware
+
+[ZMK](https://zmk.dev/) is made for this. 
+
+To say it briefly:
+
+1. Find a repo, here is a [5x6 layout one](https://github.com/IoakeimSogiakas/dactyl_manuform_5x6-ZMK).
+2. Fork it on your Github account. Click **Action**(on top with *Code*, *Pull request*, etc.) to enable it.
+3. Change the keymap to your satisfaction, here is a good [web app](https://nickcoutsos.github.io/keymap-editor/) for it, or you could edit on your local computer.
+4. For the web, save it. For local edit just push commit. Then with **Github Action's** help it will automatically starting compiling firmware for you.
+5. Download the firmware.zip in Github Action, unzip it. Flash the *\_\_left__.uf2* to your left nice! nano, the right one to your right nice! nano.
+
+That's all! Check if it is working. Later when you want to change keymap you could use [ZMK Studio](https://zmk.studio/), you don't need those flashing steps again.
+
+By the way, I recreate a shell to make more space: [my shell](https://ryanis.cool/dactyl/#manuform).
