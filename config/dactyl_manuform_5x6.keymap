@@ -52,24 +52,24 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE    &kp N1  &kp N2            &kp N3             &kp N4          &kp N5                                        &kp N6     &kp N7         &kp N8     &kp N9     &kp N0     &to 1
-&kp CAPSLOCK  &kp Q   &kp W             &kp E              &kp R           &kp T                                         &kp Y      &kp U          &kp I      &kp O      &kp P      &kp GRAVE
-&kp TAB       &kp A   &kp S             &kp D              &kp F           &kp G                                         &kp H      &kp J          &kp K      &kp L      &kp SEMI   &kp SQT
-&kp LCTRL     &kp Z   &kp X             &kp C              &kp V           &kp B                                         &kp N      &kp M          &kp COMMA  &kp DOT    &kp SLASH  &kp BACKSLASH
-                      &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                                                                          &kp MINUS  &kp EQUAL
-                                                           &kp LEFT_SHIFT  &kp SPACE                                     &kp RET    &kp BACKSPACE
-                                                                           &kp LEFT_CONTROL  &kp TAB       &kp UP_ARROW  &kp DOWN
-                                                                           &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT      &kp RIGHT
+&kp ESCAPE      &kp N1  &kp N2            &kp N3             &kp N4            &kp N5                                         &kp N6         &kp N7     &kp N8     &kp N9     &kp N0     &to 1
+&kp CAPSLOCK    &kp Q   &kp W             &kp E              &kp R             &kp T                                          &kp Y          &kp U      &kp I      &kp O      &kp P      &kp GRAVE
+&kp TAB         &kp A   &kp S             &kp D              &kp F             &kp G                                          &kp H          &kp J      &kp K      &kp L      &kp SEMI   &kp LEFT_WIN
+&kp LEFT_SHIFT  &kp Z   &kp X             &kp C              &kp V             &kp B                                          &kp N          &kp M      &kp COMMA  &kp DOT    &kp SLASH  &kp BACKSLASH
+                        &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                                                                             &kp MINUS  &kp EQUAL
+                                                             &kp LEFT_CONTROL  &kp SPACE                                      &kp BACKSPACE  &kp ENTER
+                                                                               &kp PAGE_UP   &kp LEFT_SHIFT  &kp RC(RS(TAB))  &kp PAGE_DOWN
+                                                                               &kp LEFT_ALT  &kp PSCRN       &kp HOME         &kp DEL
             >;
         };
 
         lower_layer {
             bindings = <
-&kp F12       &kp F1      &kp F2      &kp F3      &kp F4         &kp F5                  &kp F6          &kp F7       &kp F8       &kp F9  &kp F10    &kp F11
-&bt BT_SEL 0  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR  &bt BT_DISC 0  &trans                  &studio_unlock  &bootloader  &bootloader  &trans  &to 2      &to 0
-&trans        &trans      &trans      &trans      &trans         &trans                  &trans          &kp LEFT     &kp DOWN     &kp UP  &kp RIGHT  &trans
-&trans        &trans      &trans      &trans      &trans         &trans                  &kp J           &trans       &trans       &trans  &trans     &trans
-                          &trans      &trans                                                                          &trans       &trans
+&kp F12       &kp F1      &kp F2      &kp F3      &kp F4         &kp F5                  &kp F6          &kp F7       &kp F8          &kp F9          &kp F10    &kp F11
+&bt BT_SEL 0  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR  &bt BT_DISC 0  &trans                  &studio_unlock  &bootloader  &bootloader     &kp UP_ARROW    &to 2      &to 0
+&trans        &trans      &trans      &trans      &trans         &trans                  &trans          &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans
+&trans        &trans      &trans      &trans      &trans         &trans                  &kp J           &trans       &trans          &trans          &trans     &trans
+                          &trans      &trans                                                                          &trans          &trans
                                                   &trans         &trans                  &trans          &mo 0
                                                                  &trans  &trans  &trans  &trans
                                                                  &trans  &trans  &trans  &trans
