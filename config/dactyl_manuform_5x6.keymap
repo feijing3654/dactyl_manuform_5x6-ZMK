@@ -66,9 +66,9 @@
         lower_layer {
             bindings = <
 &kp F12       &kp F1      &kp F2      &kp F3      &kp F4         &kp F5                  &kp F6          &kp F7       &kp F8       &kp F9  &kp F10    &kp F11
-&bt BT_SEL 0  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR  &bt BT_DISC 0  &trans                  &studio_unlock  &bootloader  &bootloader  &trans  &trans     &trans
+&bt BT_SEL 0  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR  &bt BT_DISC 0  &trans                  &studio_unlock  &bootloader  &bootloader  &trans  &tog 2     &tog 0
 &trans        &trans      &trans      &trans      &trans         &trans                  &trans          &kp LEFT     &kp DOWN     &kp UP  &kp RIGHT  &trans
-&trans        &trans      &trans      &trans      &trans         &trans                  &trans          &trans       &trans       &trans  &trans     &trans
+&trans        &trans      &trans      &trans      &trans         &trans                  &kp J           &trans       &trans       &trans  &trans     &trans
                           &trans      &trans                                                                          &trans       &trans
                                                   &trans         &trans                  &trans          &mo 0
                                                                  &trans  &trans  &trans  &trans
