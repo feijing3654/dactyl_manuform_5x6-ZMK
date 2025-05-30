@@ -84,7 +84,7 @@
 &trans       &trans         &trans          &trans         &trans         &trans                                &trans             &trans  &trans  &kp C_VOLUME_UP    &kp C_PREVIOUS    &kp K_MUTE
                             &trans          &trans                                                                                         &trans  &trans
                                                            &trans         &kp LC(LG(LEFT_WIN))                  &kp LC(LG(RIGHT))  &trans
-                                                                          &trans                &trans  &to 0   &to 2
+                                                                          &trans                &trans  &to 0   &to 1
                                                                           &trans                &trans  &trans  &trans
             >;
         };
